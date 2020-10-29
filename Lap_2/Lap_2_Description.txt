@@ -1,0 +1,3 @@
+- Download the makefile that we developed up to this point and replace variables
+	used in recipes with automatic variables.
+  link: https://drive.google.com/open?id=1BY8NshK7NkOastvcxSc4MRHmFSlmi0LI

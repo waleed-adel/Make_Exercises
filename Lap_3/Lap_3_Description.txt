@@ -1,0 +1,34 @@
+
+A) Integrating Your Build System with Eclipse:
+
+	- Using eclipse it is possible to integrate your own build system for a project using build option in
+		the project preferences.
+		
+	- It is even possible to make eclipse error/warning/info parsers under stand your compiler
+		error/warning/info syntax . This will give you the ability to use eclipse problems window to
+		navigate through your compiler error/warning/info. This can be done using
+		window/preferences/(C/C++)/build/settings.
+		
+	- For GNU GCC, here are examples of error/warning/info messages:
+			- main.c:12:5: error: expected ',' or ';' before 'bool‘
+					- FileName:LineNumber:ColumnNumber: error: Description
+	
+			- main.c:12:5: warning: overflow in implicit constant conversion [-Woverflow]
+				- FileName:LineNumber:ColumnNumber: warning: Description
+				- Note: you have to add -Wall option to generate many types of warnings
+	
+			- main.c:14:11: note: each undeclared identifier is reported only once for each function it appears in
+				- FileName:LineNumber:ColumnNumber: note: Description
+
+
+B) Steps:
+
+	1) Download our Final makefile environment from the following link.
+		link: https://drive.google.com/open?id=1E4031ShvNV4qow0DWqqnOqcRPZS8vy8Q
+
+	2) Modify our makefile to make the compiler generate warnings on all operations.
+
+	3) In eclipse error parsers add a new error parser to under stand your compiler
+		error/warning/info syntax.
+		
+	4) Write 3 regular expressions: 1 to parse errors, 1 to parse warnings and 1 to parse info.
